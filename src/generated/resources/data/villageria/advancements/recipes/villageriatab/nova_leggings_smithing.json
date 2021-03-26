@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "villageria:nova_leggings_smithing"
+    ]
+  },
+  "criteria": {
+    "got_netherstar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:nether_star"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "villageria:nova_leggings_smithing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "got_netherstar",
+      "has_the_recipe"
+    ]
+  ]
+}

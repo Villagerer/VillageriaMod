@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "villageria",
+  "pattern": [
+    " bx",
+    "bn ",
+    " bx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:nether_star"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "b": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "villageria:nova_bow_upgrade_kit"
+  }
+}

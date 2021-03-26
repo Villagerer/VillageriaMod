@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "villageria:nova_tool_upgrade_kit"
+  },
+  "result": {
+    "item": "villageria:nova_sword"
+  }
+}

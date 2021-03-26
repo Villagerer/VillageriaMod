@@ -1,0 +1,15 @@
+{
+  "itemGroup.villageriatab": "Villageria",
+  "item.villageria.nova_sword": "Scheenes Schwert",
+  "item.villageria.nova_axe": "Scheene Axt",
+  "item.villageria.nova_pickaxe": "Scheene Spitzhacke",
+  "item.villageria.nova_shovel": "Scheener Spaten",
+  "item.villageria.nova_hoe": "Scheene Hacke",
+  "item.villageria.nova_tool_upgrade_kit": "Scheener Werkzeug Aufrüstsatz",
+  "item.villageria.nova_armor_upgrade_kit": "Scheener Rüstungs Aufrüstsatz",
+  "item.villageria.nova_bow_upgrade_kit": "Scheener Bogen Aufrüstsatz",
+  "item.villageria.nova_helmet": "Scheener Deckl",
+  "item.villageria.nova_chestplate": "Scheener Brustponzer",
+  "item.villageria.nova_leggings": "Scheene Hose",
+  "item.villageria.nova_boots": "Scheene Potschn"
+}

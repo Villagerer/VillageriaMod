@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "villageria",
+  "pattern": [
+    "xlx",
+    "bbb"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:nether_star"
+    },
+    "l": {
+      "item": "minecraft:leather"
+    },
+    "b": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "villageria:nova_armor_upgrade_kit"
+  }
+}
