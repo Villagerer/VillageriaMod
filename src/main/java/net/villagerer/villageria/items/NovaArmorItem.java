@@ -1,7 +1,6 @@
 package net.villagerer.villageria.items;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
