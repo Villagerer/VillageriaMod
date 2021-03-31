@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
+version = 'Villageria 1.16.3-0.4.0'
 group = 'net.villagerer.villageria'
 archivesBaseName = 'villageria'
 

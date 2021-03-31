@@ -6,6 +6,8 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 import net.villagerer.villageria.setup.ModItems;
 
@@ -21,7 +23,7 @@ public class NovaArmorItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
         if (player.inventory.armorInventory.get(0).getItem().equals(ModItems.NOVA_BOOTS.get())) {
             player.stepHeight = 1.0f;
-            player.abilities.setWalkSpeed(0.15F);
+            player.addPotionEffect(new EffectInstance(Effects.SPEED, 10, 0, false, false));
         }
     }
 
@@ -34,7 +36,6 @@ public class NovaArmorItem extends ArmorItem {
             PlayerEntity livingEntity = (PlayerEntity) entity;
             if (!(livingEntity.inventory.armorInventory.get(0).getItem().equals(ModItems.NOVA_BOOTS.get()))) {
                 livingEntity.stepHeight = 0.5f;
-                livingEntity.abilities.setWalkSpeed(0.1F);
             }
         }
     }

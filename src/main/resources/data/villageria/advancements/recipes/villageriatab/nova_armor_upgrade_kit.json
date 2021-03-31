@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:nova_armor_upgrade_kit"
+      "villageria:nova_armor_upgrade_kit"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:nova_armor_upgrade_kit"
+        "recipe": "villageria:nova_armor_upgrade_kit"
       }
     }
   },

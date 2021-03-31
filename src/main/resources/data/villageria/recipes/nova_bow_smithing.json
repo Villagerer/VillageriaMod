@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:bow"
+  },
+  "addition": {
+    "item": "villageria:nova_bow_upgrade_kit"
+  },
+  "result": {
+    "item": "villageria:nova_bow"
+  }
+}

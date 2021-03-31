@@ -1,0 +1,6 @@
+{
+  "parent": "villageria:item/nova_bow",
+  "textures": {
+    "layer0": "villageria:item/nova_bow_pulling_2"
+  }
+}

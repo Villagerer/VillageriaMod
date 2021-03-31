@@ -8,6 +8,7 @@ import net.villagerer.villageria.VillageriaMod;
 import net.villagerer.villageria.items.*;
 import net.villagerer.villageria.util.enums.VillageriaArmorMaterial;
 import net.villagerer.villageria.util.enums.VillageriaItemTiers;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
 
@@ -36,6 +37,14 @@ public class ModItems {
     //Hoe
     public static final RegistryObject<HoeItem> NOVA_HOE = Registration.ITEMS.register("nova_hoe", () ->
             new NovaHoe(VillageriaItemTiers.NOVA, -8, -0.0F, new Item.Properties().group(VillageriaMod.VILLAGERIATAB).isImmuneToFire().rarity(Rarity.EPIC)));
+
+    //TestItem
+    //public static final RegistryObject<Item> TEST_ITEM = Registration.ITEMS.register("test_item", () ->
+    //        new Item(new Item.Properties().group(VillageriaMod.VILLAGERIATAB)));
+
+    //Bow
+    public static final RegistryObject<BowItem> NOVA_BOW = Registration.ITEMS.register("nova_bow", () ->
+            new NovaBow(new Item.Properties().group(VillageriaMod.VILLAGERIATAB).isImmuneToFire().rarity(Rarity.EPIC)));
 
     //Helmet
     public static final RegistryObject<ArmorItem> NOVA_HELMET = Registration.ITEMS.register("nova_helmet", () ->

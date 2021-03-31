@@ -33,7 +33,7 @@ public class Recipes extends RecipeProvider {
                 .key('b', Items.BLAZE_POWDER)
                 .setGroup("villageria")
                 .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
-                .build(consumer, "nova_armor_upgrade_kit");
+                .build(consumer, VillageriaMod.getId("nova_armor_upgrade_kit"));
 
         ShapedRecipeBuilder.shapedRecipe(ModItems.NOVA_BOW_UPGRADE_KIT.get())
                 .patternLine(" bx")
@@ -44,18 +44,8 @@ public class Recipes extends RecipeProvider {
                 .key('b', Items.BLAZE_ROD)
                 .setGroup("villageria")
                 .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
-                .build(consumer, "nova_bow_upgrade_kit");
-/*
-        ShapedRecipeBuilder.shapedRecipe(ModItems.NOVA_SWORD.get())
-                .patternLine("x")
-                .patternLine("x")
-                .patternLine("s")
-                .key('x', Tags.Items.NETHER_STARS)
-                .key('s', Items.STICK)
-                .setGroup("villageria")
-                .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
-                .build(consumer, "nova_sword");
-*/
+                .build(consumer, VillageriaMod.getId("nova_bow_upgrade_kit"));
+
         SmithingRecipeBuilder.smithingRecipe(Ingredient.fromItems(Items.NETHERITE_SWORD), Ingredient.fromItems(ModItems.NOVA_TOOL_UPGRADE_KIT.get()), ModItems.NOVA_SWORD.get())
                 .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
                 .build(consumer, VillageriaMod.getId("nova_sword_smithing"));
@@ -75,6 +65,10 @@ public class Recipes extends RecipeProvider {
         SmithingRecipeBuilder.smithingRecipe(Ingredient.fromItems(Items.NETHERITE_HOE), Ingredient.fromItems(ModItems.NOVA_TOOL_UPGRADE_KIT.get()), ModItems.NOVA_HOE.get())
                 .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
                 .build(consumer, VillageriaMod.getId("nova_hoe_smithing"));
+
+        SmithingRecipeBuilder.smithingRecipe(Ingredient.fromItems(Items.BOW), Ingredient.fromItems(ModItems.NOVA_BOW_UPGRADE_KIT.get()), ModItems.NOVA_BOW.get())
+                .addCriterion("got_netherstar", InventoryChangeTrigger.Instance.forItems(Items.NETHER_STAR))
+                .build(consumer, VillageriaMod.getId("nova_bow_smithing"));
 
         //Helmet
         SmithingRecipeBuilder.smithingRecipe(Ingredient.fromItems(Items.NETHERITE_HELMET), Ingredient.fromItems(ModItems.NOVA_ARMOR_UPGRADE_KIT.get()), ModItems.NOVA_HELMET.get())
