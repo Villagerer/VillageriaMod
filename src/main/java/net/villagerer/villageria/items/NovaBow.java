@@ -11,18 +11,19 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
+import net.villagerer.villageria.VillageriaMod;
 
 public class NovaBow extends BowItem {
 
     public NovaBow(Properties builder) {
         super(builder);
-        ItemModelsProperties.registerProperty(this, new ResourceLocation("pull"), (stack, world, player) -> {
+        ItemModelsProperties.registerProperty(this, VillageriaMod.getId("pull"), (stack, world, player) -> {
             if (player == null)
                 return 0.0F;
             else
                 return player.getActiveItemStack() != stack ? 0.0F : (float)(stack.getUseDuration() - player.getItemInUseCount()) / 20.0F;
         });
-        ItemModelsProperties.registerProperty(this, new ResourceLocation("pulling"), (stack, world, player) ->
+        ItemModelsProperties.registerProperty(this, VillageriaMod.getId("pulling"), (stack, world, player) ->
                 player != null && player.isHandActive() && player.getActiveItemStack() == stack ? 1.0F : 0.0F);
     }
 

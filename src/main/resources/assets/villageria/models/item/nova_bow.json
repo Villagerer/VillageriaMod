@@ -1,26 +1,26 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "minecraft:item/bow",
   "textures": {
     "layer0": "villageria:item/nova_bow"
   },
   "overrides": [
     {
       "predicate": {
-        "minecraft:pulling": 1.0
+        "villageria:pulling": 1.0
       },
       "model": "villageria:item/nova_bow_pulling_0"
     },
     {
       "predicate": {
-        "minecraft:pulling": 1.0,
-        "minecraft:pull": 0.65
+        "villageria:pulling": 1.0,
+        "villageria:pull": 0.65
       },
       "model": "villageria:item/nova_bow_pulling_1"
     },
     {
       "predicate": {
-        "minecraft:pulling": 1.0,
-        "minecraft:pull": 0.9
+        "villageria:pulling": 1.0,
+        "villageria:pull": 0.9
       },
       "model": "villageria:item/nova_bow_pulling_2"
     }

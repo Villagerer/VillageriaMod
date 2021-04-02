@@ -39,8 +39,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         ItemHandheld(ModItems.NOVA_SHOVEL);
         ItemHandheld(ModItems.NOVA_HOE);
 
-        //ComplexItemGenerated(ModItems.TEST_ITEM);
         ItemBow(ModItems.NOVA_BOW);
+
+        ItemHandheld(ModItems.FIREBALL_LAUNCHER);
 
         //builder(itemGenerated, "nova_bow");
     }
@@ -83,11 +84,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .parent(new ModelFile.UncheckedModelFile("item/bow"))
                 .texture("layer0", VillageriaMod.getId("item/"+ location.getPath()))
                 .override()
-                .predicate(new ResourceLocation("pulling"), 1).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_0"))).end()
+                .predicate(VillageriaMod.getId("pulling"), 1).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_0"))).end()
                 .override()
-                .predicate(new ResourceLocation("pulling"), 1).predicate(new ResourceLocation("pull"), 0.65F).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_1"))).end()
+                .predicate(VillageriaMod.getId("pulling"), 1).predicate(VillageriaMod.getId("pull"), 0.65F).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_1"))).end()
                 .override()
-                .predicate(new ResourceLocation("pulling"), 1).predicate(new ResourceLocation("pull"), 0.9F).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_2"))).end();
+                .predicate(VillageriaMod.getId("pulling"), 1).predicate(VillageriaMod.getId("pull"), 0.9F).model(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow_pulling_2"))).end();
 
         this.getBuilder(location.getPath() + "_pulling_0")
                 .parent(new ModelFile.UncheckedModelFile(VillageriaMod.getId("item/nova_bow")))

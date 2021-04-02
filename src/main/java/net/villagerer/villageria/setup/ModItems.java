@@ -46,6 +46,10 @@ public class ModItems {
     public static final RegistryObject<BowItem> NOVA_BOW = Registration.ITEMS.register("nova_bow", () ->
             new NovaBow(new Item.Properties().group(VillageriaMod.VILLAGERIATAB).isImmuneToFire().rarity(Rarity.EPIC)));
 
+    //Fireball Launcher
+    public static final RegistryObject<LauncherItem> FIREBALL_LAUNCHER = Registration.ITEMS.register("fireball_launcher", () ->
+            new LauncherItem(new Item.Properties().group(VillageriaMod.VILLAGERIATAB)));
+
     //Helmet
     public static final RegistryObject<ArmorItem> NOVA_HELMET = Registration.ITEMS.register("nova_helmet", () ->
             new NovaArmorItem(VillageriaArmorMaterial.NOVA, EquipmentSlotType.HEAD, new Item.Properties().group(VillageriaMod.VILLAGERIATAB).isImmuneToFire().rarity(Rarity.EPIC)));

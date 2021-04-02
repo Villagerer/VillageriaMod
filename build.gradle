@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = 'Villageria 1.16.3-0.4.0'
+version = '1.16.3-0.4.1'
 group = 'net.villagerer.villageria'
 archivesBaseName = 'villageria'
 
@@ -77,8 +77,8 @@ minecraft {
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', 'villageria', '--all',
-                    '--existing', file('src/main/resources').toString(),
                     '--existing', file('src/generated/resources').toString(),
+                    '--existing', file('src/main/resources').toString(),
                     '--output', file('src/generated/resources/')
 
             mods {
