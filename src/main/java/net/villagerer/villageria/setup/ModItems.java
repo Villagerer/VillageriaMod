@@ -8,7 +8,6 @@ import net.villagerer.villageria.VillageriaMod;
 import net.villagerer.villageria.items.*;
 import net.villagerer.villageria.util.enums.VillageriaArmorMaterial;
 import net.villagerer.villageria.util.enums.VillageriaItemTiers;
-import org.lwjgl.system.CallbackI;
 
 public class ModItems {
 

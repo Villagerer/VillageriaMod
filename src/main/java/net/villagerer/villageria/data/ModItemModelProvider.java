@@ -21,8 +21,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
-        ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        //ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
+        //ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
         ItemGenerated(ModItems.NOVA_TOOL_UPGRADE_KIT);
         ItemGenerated(ModItems.NOVA_ARMOR_UPGRADE_KIT);
@@ -52,9 +52,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void ItemGenerated (Supplier<? extends Item> itemSupplier){
         ResourceLocation location = itemSupplier.get().getRegistryName();
-        this.getBuilder(location.getPath())
-                .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                .texture("layer0", VillageriaMod.getId("item/"+ location.getPath()));
+            this.getBuilder(location.getPath())
+                    .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                    .texture("layer0", VillageriaMod.getId("item/"+ location.getPath()));
     }
 
     public void ItemHandheld (Supplier<? extends Item> itemSupplier){

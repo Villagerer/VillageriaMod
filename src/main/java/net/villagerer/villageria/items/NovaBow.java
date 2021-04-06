@@ -7,24 +7,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.*;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
-import net.villagerer.villageria.VillageriaMod;
+
 
 public class NovaBow extends BowItem {
 
     public NovaBow(Properties builder) {
         super(builder);
-        ItemModelsProperties.registerProperty(this, VillageriaMod.getId("pull"), (stack, world, player) -> {
-            if (player == null)
-                return 0.0F;
-            else
-                return player.getActiveItemStack() != stack ? 0.0F : (float)(stack.getUseDuration() - player.getItemInUseCount()) / 20.0F;
-        });
-        ItemModelsProperties.registerProperty(this, VillageriaMod.getId("pulling"), (stack, world, player) ->
-                player != null && player.isHandActive() && player.getActiveItemStack() == stack ? 1.0F : 0.0F);
     }
 
     @Override
@@ -81,7 +72,7 @@ public class NovaBow extends BowItem {
                         worldIn.addEntity(abstractarrowentity);
                     }
 
-                    worldIn.playSound((PlayerEntity)null, playerentity.getPosX(), playerentity.getPosY(), playerentity.getPosZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (random.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                    worldIn.playSound(null, playerentity.getPosX(), playerentity.getPosY(), playerentity.getPosZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (random.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!flag1 && !playerentity.abilities.isCreativeMode) {
                         itemstack.shrink(1);
                         if (itemstack.isEmpty()) {
@@ -93,5 +84,19 @@ public class NovaBow extends BowItem {
                 }
             }
         }
+    }
+
+    /**
+     * Gets the velocity of the arrow entity from the bow's charge
+     */
+    public static float getArrowVelocity(int charge) {
+        charge *= 1.5;
+        float f = (float)charge / 20.0F;
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
     }
 }

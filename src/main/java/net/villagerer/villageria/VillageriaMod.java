@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.villagerer.villageria.setup.ModItemModelsProperties;
 import net.villagerer.villageria.setup.ModItems;
 import net.villagerer.villageria.setup.Registration;
 import net.villagerer.villageria.util.ModResourceLocation;
@@ -64,6 +65,8 @@ public class VillageriaMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+
+        ModItemModelsProperties.registerModelProperty();
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
